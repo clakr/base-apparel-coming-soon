@@ -10,8 +10,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="src/_preflight.css" />
-    
+
     <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- JS Modules -->
     <script type="module" src="src/main.ts" async></script>
@@ -19,7 +25,60 @@
   </head>
   <body>
     <main>
-     <h1 class="sr-only"></h1>
+      <h1 class="sr-only"></h1>
+      <section class="container--section">
+        <img class="logo" src="/logo.svg" alt="" />
+        <picture class="hero">
+          <source media="(min-width: 1024px)" srcset="/hero-desktop.jpg" />
+          <img src="/hero-mobile.jpg" alt="" />
+        </picture>
+        <div class="content">
+          <h2 class="content__heading">
+            We're
+            <strong class="content__heading--emphasize">Coming Soon</strong>
+          </h2>
+          <p class="content__description">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <div class="form">
+            <input
+              class="form__input"
+              type="email"
+              placeholder="Email Address"
+            />
+            <svg
+              class="form__invalid--icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <circle cx="12" cy="12" r="12" fill="#F96464" />
+                <path
+                  fill="#FFF"
+                  fill-rule="nonzero"
+                  d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"
+                />
+              </g>
+            </svg>
+            <button class="form__cta">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 1l8.836 8.836L1 18.671"
+                />
+              </svg>
+            </button>
+            <span class="form__invalid--label"
+              >Please provide a valid email</span
+            >
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
